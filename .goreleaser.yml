@@ -1,0 +1,32 @@
+project_name: gorfbot
+before:
+  hooks:
+    - go mod tidy
+builds:
+  -
+    main: ./cmd/gorfbot/main.go
+    binary: gorfbot
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - freebsd
+      - windows
+      - darwin
+    goarch:
+      - amd64
+archives:
+  -
+    wrap_in_directory: true
+    replacements:
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+      amd64: x86_64
+    files:
+      - example.config.yml
+snapshot:
+  name_template: "{{ .Tag }}-next"
+release:
+  draft: true
+  prerelease: auto

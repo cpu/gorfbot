@@ -1,0 +1,22 @@
+linters-settings:
+  gocyclo:
+    min-complexity: 25
+  govet:
+    check-shadowing: false
+  misspell:
+    locale: "US_CA"
+
+linters:
+  enable-all: true
+  disable:
+    - gofumpt
+    - testpackage
+    - paralleltest # TODO: Can probably use this one with some effort...
+    - gochecknoglobals
+    - maligned
+    - godox
+    - nlreturn
+    - exhaustivestruct
+    - gochecknoinits
+    - gocritic
+    - scopelint

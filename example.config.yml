@@ -1,0 +1,34 @@
+MongoConf:
+  Username: "xxxxx"
+  Password: "xxxxx"
+  Hostname: "example.com"
+  Database: "xxxxxx"
+  Options: "retryWrites=true&w=majority"
+  ConnectTimeout: "30s"
+  ReadTimeout: "30s"
+  WriteTimeout: "30s"
+SlackConf:
+  APIToken: "xxxxx"
+  Debug: false
+  StateMaxAge: "1h"
+FrogtipConf:
+  UserAgent: ""
+ReactjiKeysConf:
+  Keywords:
+    turkey: 
+      - turkey
+    gobble: 
+      - turkey
+      - exclamation
+GISConf:
+  Timeout: "30s"
+  CSEID: "xxxxxx"
+  APIKey: "yyyyyy"
+URLsConf:
+  URLs:
+  - HostPattern: ".*\.example.com"
+    PathPattern: "\/example\/.*"
+    Collection: "example_site_links"
+  - HostPattern: "github.com"
+    PathPattern: "\/cpu\/gorfbot\/issues\/.*"
+    Collection: "gorfbot_issue_links"
